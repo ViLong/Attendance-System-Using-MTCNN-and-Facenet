@@ -16,6 +16,7 @@
 ![](image_system/output1.jpg)
 3. Run file main.py on terminal or compiler
 4. The system will display:
+
 - Access to Manage Student if you want to add, delete, edit, add face images for students. (Must have at least 2 faces in the system)
 - After collecting the face image, press the Train Data button.
 - After training the data, click Check Attendance to recognize faces
