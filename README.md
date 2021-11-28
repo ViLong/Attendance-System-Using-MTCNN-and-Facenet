@@ -21,3 +21,6 @@
 - After collecting the face image, press the Train Data button.
 - After training the data, click Check Attendance to recognize faces
 - After the system recognizes the face, the face's information will be automatically saved in the attendance data. Can be checked in the View Attendance section.
+
+
+_Copyright 2021 Vi Long._
