@@ -20,15 +20,23 @@
 5. Run file main.py on terminal or compiler
 6. The system will display:
   <p align="center">
-    <img width="800" src="image_system/mainscreen.jpg">
+    <img width="700" src="image_system/mainscreen.jpg">
   </p>
 - Access to Manage Student if you want to add, delete, edit, add face images for students. (Must have at least 2 faces in the system)
-- ![](image_system/managstudent.png)
-- ![](image_system/addphoto.png)
+  <p align="center">
+      <img width="700" src="image_system/managstudent.png">
+  </p>
+  <p align="center">
+    <img width="700" src="image_system/addphoto.png">
+  </p>
 - After collecting the face image, press the Train Data button.
 - After training the data, click Check Attendance to recognize faces.
-![](image_system/checkattendance.png)
+  <p align="center">
+      <img width="700" src="checkattendance.png">
+    </p>
 - After the system recognizes the face, the face's information will be automatically saved in the attendance data. Can be checked in the View Attendance section.
-![](image_system/viewattendance.png)
+<p align="center">
+    <img width="700" src="image_system/viewattendance.png">
+  </p>
 
 _Copyright 2021 Vi Long._
