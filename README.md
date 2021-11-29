@@ -4,6 +4,10 @@
 - Multi-task Cascaded Convolutional Networks (MTCNN) to detect faces on image
 - Facenet algorithm neural network to build face feature vector
 - Euclidean distance (as default) to calculate similarity between two face feature vectors. There is cosine distance verifier in application.
+- Below is a use case diagram showing the main functions of the attendance system using MTCNN and Facenet :
+  <p align="center">
+     <img width="1000" src="image_system/Use-Case.png">
+   </p>
 
 ### Project requirements
 
@@ -32,7 +36,7 @@
 - After collecting the face image, press the Train Data button.
 - After training the data, click Check Attendance to recognize faces.
   <p align="center">
-      <img width="700" src="checkattendance.png">
+      <img width="700" src="image_system/checkattendance.png">
     </p>
 - After the system recognizes the face, the face's information will be automatically saved in the attendance data. Can be checked in the View Attendance section.
 <p align="center">
