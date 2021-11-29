@@ -18,13 +18,17 @@
 ### How to run application
 1. Install the required libraries in the requirements.txt file
 1. Go to the model folder, extract the 2 files model part 1 and model part 2 into a complete model. The result will look like this:
-![](image_system/output1.jpg)
+  <p align="center">
+     <img width="700" src="image_system/output1.jpg">
+   </p>
 1. Create database in MySQL Workbench for store face information will all columns like this table : 
   <p align="center">
      <img width="700" src="image_system/database.PNG">
    </p>
-1. Open all file .py and fix the database name for suitable with the database already create.
-1. Run file main.py on terminal or compiler.
+1. Open all file .py and fix the database name for suitable with the database already create
+
+1. Run file main.py on terminal or compiler
+
 1. The system will display:
   <p align="center">
     <img width="700" src="image_system/mainscreen.jpg">
