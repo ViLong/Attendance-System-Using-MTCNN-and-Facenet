@@ -19,7 +19,7 @@
 4. Open all file .py and fix the database name for suitable with the database already create
 5. Run file main.py on terminal or compiler
 6. The system will display:
-![](image_system/mainscreen.jpg)
+![alt text](image_system/mainscreen.jpg)
 - Access to Manage Student if you want to add, delete, edit, add face images for students. (Must have at least 2 faces in the system)
 ![](image_system/managstudent.png)
 ![](image_system/addphoto.png)
