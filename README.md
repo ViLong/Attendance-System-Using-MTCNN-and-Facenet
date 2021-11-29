@@ -20,7 +20,7 @@
 5. Run file main.py on terminal or compiler
 6. The system will display:
   <p align="center">
-    <img width="200" src="image_system/mainscreen.jpg">
+    <img width="800" src="image_system/mainscreen.jpg">
   </p>
 - Access to Manage Student if you want to add, delete, edit, add face images for students. (Must have at least 2 faces in the system)
 - ![](image_system/managstudent.png)
