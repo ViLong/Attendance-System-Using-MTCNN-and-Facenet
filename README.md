@@ -4,6 +4,10 @@
 - Multi-task Cascaded Convolutional Networks (MTCNN) to detect faces on image
 - Facenet algorithm neural network to build face feature vector
 - Euclidean distance (as default) to calculate similarity between two face feature vectors. There is cosine distance verifier in application.
+- Below is a use case diagram showing the main functions of the attendance system using MTCNN and Facenet :
+  <p align="center">
+     <img width="1000" src="image_system/Use-Case.png">
+   </p>
 
 ### Project requirements
 
@@ -19,14 +23,24 @@
 4. Open all file .py and fix the database name for suitable with the database already create
 5. Run file main.py on terminal or compiler
 6. The system will display:
-![](image_system/mainscreen.jpg)
+  <p align="center">
+    <img width="700" src="image_system/mainscreen.jpg">
+  </p>
 - Access to Manage Student if you want to add, delete, edit, add face images for students. (Must have at least 2 faces in the system)
-![](image_system/managstudent.png)
-![](image_system/addphoto.png)
+  <p align="center">
+      <img width="700" src="image_system/managstudent.png">
+  </p>
+  <p align="center">
+    <img width="700" src="image_system/addphoto.png">
+  </p>
 - After collecting the face image, press the Train Data button.
 - After training the data, click Check Attendance to recognize faces.
-![](image_system/checkattendance.png)
+  <p align="center">
+      <img width="700" src="image_system/checkattendance.png">
+    </p>
 - After the system recognizes the face, the face's information will be automatically saved in the attendance data. Can be checked in the View Attendance section.
-![](image_system/viewattendance.png)
+<p align="center">
+    <img width="700" src="image_system/viewattendance.png">
+  </p>
 
 _Copyright 2021 Vi Long._
