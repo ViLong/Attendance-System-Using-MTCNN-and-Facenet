@@ -21,7 +21,7 @@
 ![](image_system/output1.jpg)
 3. Create database in MySQL Workbench for store face information will all columns like this table : 
   <p align="center">
-     <img width="700" src="image_system/database.png">
+     <img width="700" src="image_system/database.PNG">
    </p>
 4. Open all file .py and fix the database name for suitable with the database already create
 5. Run file main.py on terminal or compiler
