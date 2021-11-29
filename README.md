@@ -19,11 +19,14 @@
 4. Open all file .py and fix the database name for suitable with the database already create
 5. Run file main.py on terminal or compiler
 6. The system will display:
-
+![](image_system/mainscreen.jpg)
 - Access to Manage Student if you want to add, delete, edit, add face images for students. (Must have at least 2 faces in the system)
+![](image_system/managstudent.png)
+![](image_system/addphoto.png)
 - After collecting the face image, press the Train Data button.
-- After training the data, click Check Attendance to recognize faces
+- After training the data, click Check Attendance to recognize faces.
+![](image_system/checkattendance.png)
 - After the system recognizes the face, the face's information will be automatically saved in the attendance data. Can be checked in the View Attendance section.
-
+![](image_system/viewattendance.png)
 
 _Copyright 2021 Vi Long._
