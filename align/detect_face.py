@@ -1,30 +1,3 @@
-""" Tensorflow implementation of the face detection / alignment algorithm found at
-https://github.com/kpzhang93/MTCNN_face_detection_alignment
-"""
-# MIT License
-# 
-# Copyright (c) 2016 David Sandberg
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# 
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-# Modify by nkloi@hcmut.edu.vn
-# 3/2020
-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -37,7 +10,7 @@ import cv2
 import os
 
 def layer(op):
-    """Decorator for composable network layers."""
+
 
     def layer_decorated(self, *args, **kwargs):
         # Automatically set a name if not provided.
@@ -201,12 +174,7 @@ class Network(object):
             return fc
 
 
-    """
-    Multi dimensional softmax,
-    refer to https://github.com/tensorflow/tensorflow/issues/210
-    compute softmax along the dimension of target
-    the native softmax only supports batch_size x dimension
-    """
+
     @layer
     def softmax(self, target, axis, name=None):
         max_axis = tf.reduce_max(target, axis, keepdims=True)
@@ -452,9 +420,8 @@ def bulk_detect_face(images, detection_window_size_ratio, pnet, rnet, onet, thre
             minl = minl * factor
             factor_count += 1
 
-    # # # # # # # # # # # # #
     # first stage - fast proposal network (pnet) to obtain face candidates
-    # # # # # # # # # # # # #
+
 
     images_obj_per_resolution = {}
 
@@ -529,9 +496,7 @@ def bulk_detect_face(images, detection_window_size_ratio, pnet, rnet, onet, thre
                 tempimg = (tempimg - 127.5) * 0.0078125
                 image_obj['rnet_input'] = np.transpose(tempimg, (3, 1, 0, 2))
 
-    # # # # # # # # # # # # #
     # second stage - refinement of face candidates with rnet
-    # # # # # # # # # # # # #
 
     bulk_rnet_input = np.empty((0, 24, 24, 3))
     for index, image_obj in enumerate(images_with_boxes):
@@ -585,9 +550,8 @@ def bulk_detect_face(images, detection_window_size_ratio, pnet, rnet, onet, thre
 
         i += rnet_input_count
 
-    # # # # # # # # # # # # #
     # third stage - further refinement and facial landmarks positions with onet
-    # # # # # # # # # # # # #
+
 
     bulk_onet_input = np.empty((0, 48, 48, 3))
     for index, image_obj in enumerate(images_with_boxes):
@@ -753,7 +717,7 @@ def pad(total_boxes, w, h):
     
     return dy, edy, dx, edx, y, ey, x, ex, tmpw, tmph
 
-# function [bboxA] = rerec(bboxA)
+
 def rerec(bboxA):
     """Convert bboxA to square."""
     h = bboxA[:,3]-bboxA[:,1]
@@ -768,16 +732,5 @@ def imresample(img, sz):
     im_data = cv2.resize(img, (sz[1], sz[0]), interpolation=cv2.INTER_AREA) #@UndefinedVariable
     return im_data
 
-    # This method is kept for debugging purpose
-#     h=img.shape[0]
-#     w=img.shape[1]
-#     hs, ws = sz
-#     dx = float(w) / ws
-#     dy = float(h) / hs
-#     im_data = np.zeros((hs,ws,3))
-#     for a1 in range(0,hs):
-#         for a2 in range(0,ws):
-#             for a3 in range(0,3):
-#                 im_data[a1,a2,a3] = img[int(floor(a1*dy)),int(floor(a2*dx)),a3]
-#     return im_data
+
 

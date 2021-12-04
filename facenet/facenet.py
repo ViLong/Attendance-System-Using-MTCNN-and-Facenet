@@ -1,30 +1,3 @@
-"""Functions for building the face recognition network.
-"""
-# MIT License
-# 
-# Copyright (c) 2016 David Sandberg
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# 
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-# Modify by nkloi@hcmut.edu.vn
-# 3/2020
-
-# pylint: disable=missing-docstring
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -46,12 +19,12 @@ from six import iteritems
 
 def triplet_loss(anchor, positive, negative, alpha):
     """Calculate the triplet loss according to the FaceNet paper
-    
+
     Args:
       anchor: the embeddings for the anchor images.
       positive: the embeddings for the positive images.
       negative: the embeddings for the negative images.
-  
+
     Returns:
       the triplet loss according to the FaceNet paper as a float tensor.
     """
@@ -66,9 +39,7 @@ def triplet_loss(anchor, positive, negative, alpha):
 
 
 def center_loss(features, label, alfa, nrof_classes):
-    """Center loss based on the paper "A Discriminative Feature Learning Approach for Deep Face Recognition"
-       (http://ydwen.github.io/papers/WenECCV16.pdf)
-    """
+
     nrof_features = features.get_shape()[1]
     centers = tf.get_variable('centers', [nrof_classes, nrof_features], dtype=tf.float32,
                               initializer=tf.constant_initializer(0), trainable=False)
